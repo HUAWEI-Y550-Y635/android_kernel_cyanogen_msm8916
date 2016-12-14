@@ -207,7 +207,7 @@ static const struct qpnp_vadc_map_pt adcmap_btm_threshold[] = {
 	{760,	480},
 	{780,	471},
 	{800,	463},
-#ifdef CONFIG_MACH_HUAWEI
+#elif defined(CONFIG_MACH_HUAWEI)
 	{-300,  1609},
 	{-200,  1512},
 	{-100,  1391},
@@ -375,7 +375,7 @@ static const struct qpnp_vadc_map_pt adcmap_btm_threshold[] = {
 	{770,	213},
 	{780,	208},
 	{790,	203}
-#endif /* CONFIG_MACH_RENDANG || CONFIG_MACH_JALEBI || CONFIG_MACH_CP8675 */
+#endif /* CONFIG_MACH_RENDANG || CONFIG_MACH_JALEBI || CONFIG_MACH_CP8675 || CONFIG_MACH_HUAWEI */
 };
 
 static const struct qpnp_vadc_map_pt adcmap_qrd_btm_threshold[] = {
@@ -1052,7 +1052,7 @@ static const struct qpnp_vadc_map_pt adcmap_smb_batt_therm[] = {
 	{770,  544},
 	{780,  541},
 	{790, 538},
-else
+#else
 	{-300,	1625},
 	{-200,	1515},
 	{-100,	1368},
